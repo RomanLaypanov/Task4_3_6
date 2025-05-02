@@ -9,8 +9,8 @@ public class Main {
         Charset charset = null;
 
         try (InputStream inputStream = new ByteArrayInputStream(array)) {
-            AsString.readAsString(inputStream, charset);
-        }catch (IOException e){
+            System.out.println(AsString.readAsString(inputStream, charset));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

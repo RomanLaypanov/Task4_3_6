@@ -4,13 +4,9 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class AsString {
-    public static void readAsString(InputStream inputStream, Charset charset) throws IOException {
+    public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
         byte[] bytes = inputStream.readAllBytes();
 
-        charset = StandardCharsets.US_ASCII;
-
-        String s = new String(bytes, charset);
-
-        System.out.println(s);
+        return new String(bytes, StandardCharsets.US_ASCII);
     }
 }
